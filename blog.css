@@ -1,0 +1,41 @@
+* {
+    background-color: #353535;
+    color: #CCCCCC;
+    font-family: arial, sans-serif;
+}
+
+body {
+    display: block;
+    margin: 8px;
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        width: 85%;
+        margin: auto;
+    }
+}
+
+body a {
+    color: #D2991D;
+}
+
+body .table-of-contents {
+    background-color: #2A2A2A;
+    border: 1px solid #2A2A2A;
+    width: fit-content;
+}
+
+body .table-of-contents ul {
+    padding-right: 24px;
+}
+
+body .table-of-contents li {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+body .table-of-contents ul,
+li {
+    background-color: #2A2A2A;
+}
