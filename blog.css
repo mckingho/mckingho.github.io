@@ -36,7 +36,8 @@ body .table-of-contents li {
 }
 
 body .table-of-contents ul,
-li {
+body .table-of-contents li,
+body .table-of-contents a {
     background-color: #2A2A2A;
 }
 
@@ -51,7 +52,7 @@ body table caption {
 }
 
 body table td,
-th {
+body table th {
     background-color: #2A2A2A;
     padding: 8px;
 }
