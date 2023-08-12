@@ -1,0 +1,16 @@
+<?xml version="1.0" standalone="no"?>
+<svg width="140" height="160" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+    <g class="layer1">
+        <path class="shape" d="m87,2l-70,41l-15,65l23,21l78,-14l23,-73l-17,-35l-22,-5z" fill="rgba(0,0,0,.7)"
+            stroke="#000000" />
+    </g>
+    <g class="layer2">
+        <path d="m2,108l1,24l22,-3l-23,-21z" fill="rgba(0,0,0,.5)" stroke="#000000" />
+        <path d="m34,151l72,0l-3,-36l-78,14l9,22z" fill="rgba(0,0,0,.5)" stroke="#000000" />
+        <path d="m123,133l14,-51l-11,-40l-23,73l20,18z" fill="rgba(0,0,0,.5)" stroke="#000000" />
+    </g>
+    <g class="layer3">
+        <path d="m3,132l31,19l-9,-22l-22,3z" fill="rgba(0,0,0,.3)" stroke="#000000" />
+        <path d="m106,151l17,-18l-20,-18l3,36z" fill="rgba(0,0,0,.3)" stroke="#000000" />
+    </g>
+</svg>
