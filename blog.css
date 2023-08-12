@@ -39,3 +39,19 @@ body .table-of-contents ul,
 li {
     background-color: #2A2A2A;
 }
+
+body table {
+    white-space: nowrap;
+}
+
+body table caption {
+    color: #D2991D;
+    font-size: 24px;
+    white-space: nowrap;
+}
+
+body table td,
+th {
+    background-color: #2A2A2A;
+    padding: 8px;
+}

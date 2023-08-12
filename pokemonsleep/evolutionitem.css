@@ -1,0 +1,68 @@
+table td {
+    text-align: center;
+}
+
+.stone {
+    width: 28px;
+    height: 32px;
+    display: inline-block;
+    background: url(./res/stone.svg);
+    background-size: cover;
+}
+
+/* filters that turns black color to target color */
+/* credit: calculation at https://codepen.io/sosuke/pen/Pjoqqp */
+.filter-fire-stone {
+    /* #EA7E02 */
+    filter: invert(71%) sepia(55%) saturate(6146%) hue-rotate(5deg) brightness(95%) contrast(103%);
+}
+
+.filter-ice-stone {
+    /* #6DF5FF */
+    filter: invert(80%) sepia(17%) saturate(1330%) hue-rotate(151deg) brightness(105%) contrast(103%);
+}
+
+.filter-kings-rock {
+    /* #FFD700 */
+    filter: invert(76%) sepia(96%) saturate(1872%) hue-rotate(1deg) brightness(103%) contrast(106%);
+}
+
+.filter-leaf-stone {
+    /* #54A251 */
+    filter: invert(56%) sepia(55%) saturate(427%) hue-rotate(69deg) brightness(89%) contrast(87%);
+}
+
+.filter-linking-cord {
+    /* #545454 */
+    filter: invert(32%) sepia(0%) saturate(1876%) hue-rotate(135deg) brightness(95%) contrast(86%);
+}
+
+.filter-metal-coat {
+    /* #C6D3CF */
+    filter: invert(99%) sepia(9%) saturate(460%) hue-rotate(79deg) brightness(82%) contrast(102%);
+}
+
+.filter-moon-stone {
+    /* #5C7A71 */
+    filter: invert(46%) sepia(21%) saturate(343%) hue-rotate(111deg) brightness(93%) contrast(93%);
+}
+
+.filter-oval-stone {
+    /* #D4E1EA */
+    filter: invert(95%) sepia(3%) saturate(1474%) hue-rotate(175deg) brightness(96%) contrast(91%);
+}
+
+.filter-shiny-stone {
+    /* #FEE54D */
+    filter: invert(69%) sepia(100%) saturate(284%) hue-rotate(3deg) brightness(107%) contrast(103%);
+}
+
+.filter-thunder-stone {
+    /* #33B765 */
+    filter: invert(58%) sepia(38%) saturate(710%) hue-rotate(90deg) brightness(94%) contrast(94%);
+}
+
+.filter-water-stone {
+    /* #6A60FE */
+    filter: invert(43%) sepia(96%) saturate(3602%) hue-rotate(228deg) brightness(98%) contrast(108%);
+}
