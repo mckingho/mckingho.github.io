@@ -66,3 +66,57 @@ table td {
     /* #6A60FE */
     filter: invert(43%) sepia(96%) saturate(3602%) hue-rotate(228deg) brightness(98%) contrast(108%);
 }
+
+.mon {
+    width: 40px;
+    height: 32px;
+    margin: auto;
+    display: inline-block;
+    -webkit-mask-image: url(./res/mon.svg);
+    mask-image: url(./res/mon.svg);
+    -webkit-mask-size: 100%;
+    mask-size: 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+
+/* dex color */
+.bg-red {
+    background-color: #F05868;
+}
+
+.bg-blue {
+    background-color: #3088F0;
+}
+
+.bg-yellow {
+    background-color: #F0D048;
+}
+
+.bg-green {
+    background-color: #40B868;
+}
+
+.bg-black {
+    background-color: #585858;
+}
+
+.bg-brown {
+    background-color: #B07030;
+}
+
+.bg-purple {
+    background-color: #A868C0;
+}
+
+.bg-gray {
+    background-color: #A0A0A0;
+}
+
+.bg-white {
+    background-color: #F0F0F0;
+}
+
+.bg-pink {
+    background-color: #F890C8;
+}
