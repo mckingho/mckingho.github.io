@@ -48,6 +48,7 @@ body {
 #ingredients-title {
     color: #2A2A2A;
     font-size: 24px;
+    margin-bottom: 16px;
 }
 
 #ingredients-total-no {
@@ -56,4 +57,82 @@ body {
     font-size: 16px;
     border-radius: 16px;
     padding: 0 16px 0 16px;
+}
+
+#ingredients-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.cls-ingr {
+    flex-basis: 30%;
+    aspect-ratio: 1 / 1;
+    /*min-height: 80px;*/
+    border-radius: 8px;
+    border-width: 1px;
+    border-color: #9D7316;
+    border-style: solid;
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.cls-ingr-display {
+    height: 75%;
+}
+
+.cls-select-ingr-box {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.cls-select-btn {
+    flex-basis: 25%;
+    border-width: 0 0 1px 1px;
+    border-color: #9D7316;
+    border-style: solid;
+    text-align: center;
+    padding: 1px 0 1px 0;
+    color: #2A2A2A;
+}
+
+.cls-select-btn-corner {
+    border-radius: 0 0 0 8px;
+}
+
+.cls-ingr-img {
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 75%;
+    position: relative;
+}
+
+.cls-ingr-no {
+    color: #2A2A2A;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-right: 2px;
+    padding-bottom: 2px;
+}
+
+.cls-ingr-name {
+    min-height: 25%;
+    text-align: center;
+    color: #2A2A2A;
+    border-width: 1px 0 0 0;
+    border-radius: 0 0 8px 8px;
+    border-color: #9D7316;
+    border-style: solid;
+    background-color: #D2991D;
+}
+
+.cls-ingr-name-margin {
+    height: 2px;
+}
+
+#ingr-img-leek {
+    background-image: url(./res/ingredients/leek.svg);
 }
