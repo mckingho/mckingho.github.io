@@ -68,7 +68,7 @@ body {
 .cls-ingr {
     flex-basis: 30%;
     aspect-ratio: 1 / 1;
-    /*min-height: 80px;*/
+    min-height: 100px;
     border-radius: 8px;
     border-width: 1px;
     border-color: #9D7316;
