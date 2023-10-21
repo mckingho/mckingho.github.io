@@ -76,6 +76,7 @@ body {
     border-style: solid;
     margin-bottom: 16px;
     position: relative;
+    cursor: pointer;
 }
 
 .cls-ingr-display {
