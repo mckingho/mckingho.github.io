@@ -18,7 +18,7 @@ const store = {
     },
 };
 
-window.onload = () => {
+function selectIngredientListeners() {
     const ingredients = Object.keys(store?.ingredients);
     const ingrTotalText = document.getElementById('ingredients-total-no');
     const setIngrTotalText = () => {
@@ -67,4 +67,8 @@ window.onload = () => {
             }
         });
     });
+}
+
+window.onload = () => {
+    selectIngredientListeners();
 };
