@@ -376,3 +376,8 @@ const recipes = {
         ],
     },
 };
+
+export {
+    ingredient_icons,
+    recipes,
+};
