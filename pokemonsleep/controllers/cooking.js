@@ -20,6 +20,11 @@ const store = {
 
 window.onload = () => {
     const ingredients = Object.keys(store?.ingredients);
+    const ingrTotalText = document.getElementById('ingredients-total-no');
+    const setIngrTotalText = () => {
+        const total = Object.values(store?.ingredients).reduce((a, b) => a + b, 0);
+        ingrTotalText.innerHTML = total;
+    };
     // select ingredients
     ingredients.forEach((ingr) => {
         const ingrNumText = document.getElementById('ingr-no-' + ingr);
@@ -32,6 +37,7 @@ window.onload = () => {
             if (store?.ingredients?.[ingr] >= 1) {
                 store.ingredients[ingr] -= 1;
                 setIngrNumText(store.ingredients[ingr]);
+                setIngrTotalText();
             }
         });
         const sub5Btn = document.getElementById('ingr-sub5-' + ingr);
@@ -40,6 +46,7 @@ window.onload = () => {
             if (store?.ingredients?.[ingr] >= 5) {
                 store.ingredients[ingr] -= 5;
                 setIngrNumText(store.ingredients[ingr]);
+                setIngrTotalText();
             }
         });
         const add5Btn = document.getElementById('ingr-add5-' + ingr);
@@ -48,6 +55,7 @@ window.onload = () => {
             if (store?.ingredients?.[ingr] <= Number.MAX_SAFE_INTEGER - 5) {
                 store.ingredients[ingr] += 5;
                 setIngrNumText(store.ingredients[ingr]);
+                setIngrTotalText();
             }
         });
         const addBtn = document.getElementById('ingr-add-' + ingr);
@@ -55,6 +63,7 @@ window.onload = () => {
             if (store?.ingredients?.[ingr] <= Number.MAX_SAFE_INTEGER - 1) {
                 store.ingredients[ingr] += 1;
                 setIngrNumText(store.ingredients[ingr]);
+                setIngrTotalText();
             }
         });
     });
