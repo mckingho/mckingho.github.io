@@ -27,9 +27,11 @@ function recipeIngredientsHtml(recipe, lacking = {}) {
         recipe.ingredients.forEach((ingrCount) => {
             for (const [ingr, count] of Object.entries(ingrCount)) {
                 if (lacking[ingr] > 0) {
-                    html += ingredient_icons[ingr] + ' ' + count + ' (-' + lacking[ingr] + ')';
+                    html += `<span class="cls-lack-ingr">
+                        ${ingredient_icons[ingr]} ${count} (-${lacking[ingr]})&nbsp;
+                        </span>`;
                 } else {
-                    html += ingredient_icons[ingr] + ' ' + count;
+                    html += ingredient_icons[ingr] + ' ' + count + '&nbsp;';
                 }
             }
         });
@@ -42,7 +44,12 @@ function checkRecipes() {
     for (const [recipeKey, info] of Object.entries(recipes)) {
         const lacking = lacking_ingredients(info, store?.ingredients);
 
-        const dishElem = document.getElementById('dish-' + recipeKey);
+        const dishPowerElem = document.getElementById('dish-power-' + recipeKey);
+        if (Object.keys(lacking).length > 0) {
+            dishPowerElem?.classList.remove('cls-ready-dish-power');
+        } else {
+            dishPowerElem?.classList.add('cls-ready-dish-power');
+        }
         const html = recipeIngredientsHtml(info, lacking);
         const ingrElem = document.getElementById('ingr-' + recipeKey);
         if (ingrElem) {
@@ -112,4 +119,5 @@ function selectIngredientListeners() {
 
 window.onload = () => {
     selectIngredientListeners();
+    checkRecipes();
 };

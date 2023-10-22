@@ -222,15 +222,16 @@ body {
     border-width: 1px;
     border-color: #9D7316;
     border-style: solid;
-    margin-bottom: 4px;
-    min-height: 54px;
+    margin-bottom: 8px;
+    min-height: 60px;
+    box-shadow: 0 2px #A3A3A3;
 }
 
 .cls-dish-power {
     color: #F4F4F4;
     float: right;
-    background-color: #4F4F4F;
-    padding: 0 8px 0 8px;
+    background-color: #898989;
+    padding: 1px 8px 1px 8px;
     border-radius: 0 8px 0 8px;
 }
 
@@ -238,11 +239,22 @@ body {
     color: #2A2A2A;
     padding-top: 8px;
     padding-left: 54px;
+    margin-bottom: 8px;
 }
 
 .cls-dish-ingr {
     color: #2A2A2A;
+    font-size: 12px;
     padding-left: 54px;
+    margin-bottom: 8px;
+}
+
+.cls-ready-dish-power {
+    background-color: #D2991D;
+}
+
+.cls-lack-ingr {
+    color: #AF0000;
 }
 
 #custom-footer {
