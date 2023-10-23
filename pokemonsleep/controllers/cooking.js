@@ -118,6 +118,21 @@ function selectIngredientListeners() {
     });
 }
 
+function toggleIngredientListener() {
+    const toggle = document.getElementById('ingredients-toggle');
+    toggle?.addEventListener('click', () => {
+        console.log('toggle');
+        const ingrCtr = document.getElementById('ingredients-container');
+        if (ingrCtr?.style.display !== 'none') {
+            ingrCtr.style.display = 'none';
+            toggle.innerText = '[+]';
+        } else {
+            ingrCtr.style.display = 'flex';
+            toggle.innerText = '[-]';
+        }
+    });
+}
+
 function typeListeners() {
     const handleRecipeDisplay = () => {
         const ctrIds = [
@@ -167,6 +182,7 @@ function typeListeners() {
 
 window.onload = () => {
     selectIngredientListeners();
+    toggleIngredientListener();
     typeListeners();
     checkRecipes();
 };
