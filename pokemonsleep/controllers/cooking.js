@@ -19,6 +19,7 @@ const store = {
         tail: 0,
         soybeans: 0,
     },
+    selectedType: 'dish-type-curry', // element ID
 };
 
 function recipeIngredientsHtml(recipe, lacking = {}) {
@@ -117,7 +118,55 @@ function selectIngredientListeners() {
     });
 }
 
+function typeListeners() {
+    const handleRecipeDisplay = () => {
+        const ctrIds = [
+            'dish-curry-container',
+            'dish-salads-container',
+            'dish-desserts-container',
+        ];
+        for (const ctrId of ctrIds) {
+            const container = document.getElementById(ctrId);
+            if (
+                (store?.selectedType === 'dish-type-curry' &&
+                    ctrId === 'dish-curry-container') ||
+                (store?.selectedType === 'dish-type-salads' &&
+                    ctrId === 'dish-salads-container') ||
+                (store?.selectedType === 'dish-type-desserts' &&
+                    ctrId === 'dish-desserts-container')
+            ) {
+                container.classList.remove('cls-hide-dish-container');
+            } else {
+                container.classList.add('cls-hide-dish-container');
+            }
+        }
+    };
+    const setTypeListener = (selectedBtn) => {
+        selectedBtn.addEventListener('click', () => {
+            const typeBtns = document.getElementsByClassName('cls-dish-type');
+            for (const btn of typeBtns) {
+                if (btn.id === selectedBtn.id) {
+                    btn.classList.add('cls-dish-type-selected');
+                } else {
+                    btn.classList.remove('cls-dish-type-selected');
+                }
+            }
+            if (store) {
+                store.selectedType = selectedBtn.id;
+            }
+            handleRecipeDisplay();
+        })
+    };
+    const curryBtn = document.getElementById('dish-type-curry');
+    setTypeListener(curryBtn);
+    const saladsBtn = document.getElementById('dish-type-salads');
+    setTypeListener(saladsBtn);
+    const dessertsBtn = document.getElementById('dish-type-desserts');
+    setTypeListener(dessertsBtn);
+}
+
 window.onload = () => {
     selectIngredientListeners();
+    typeListeners();
     checkRecipes();
 };

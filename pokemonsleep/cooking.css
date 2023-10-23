@@ -201,15 +201,25 @@ body {
     min-height: 54px;
 }
 
+.cls-hide-dish-container {
+    display: none;
+}
+
 .cls-dish-type {
     flex: 1;
-    color: #2A2A2A;
+    color: #616161;
     text-align: center;
     border-radius: 8px 8px 0 0;
     border-width: 1px;
     border-color: #9D7316;
     border-style: solid;
     padding: 18px 0 1px 0;
+    background-color: #CCCCCC;
+    cursor: pointer;
+}
+
+.cls-dish-type-selected {
+    color: #2A2A2A;
     background-color: #D2991D;
 }
 
