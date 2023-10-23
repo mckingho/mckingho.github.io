@@ -59,6 +59,25 @@ body {
     padding: 0 16px 0 16px;
 }
 
+#ingredients-toggle {
+    color: #9D7316;
+    font-size: 16px;
+    font-family: monospace;
+    cursor: pointer;
+}
+
+#ingredients-reset {
+    font-size: 16px;
+    float: right;
+    border-radius: 16px;
+    border-width: 1px;
+    border-color: #9D7316;
+    border-style: solid;
+    padding: 4px 16px 4px 16px;
+    box-shadow: 0 2px #A3A3A3;
+    cursor: pointer;
+}
+
 #ingredients-container {
     display: flex;
     flex-flow: row wrap;
