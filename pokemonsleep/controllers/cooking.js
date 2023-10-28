@@ -118,6 +118,22 @@ function selectIngredientListeners() {
     });
 }
 
+function resetIngredientsListener() {
+    const resetBtn = document.getElementById('ingredients-reset');
+    const ingrNoElems = document.getElementsByClassName('cls-ingr-no');
+    const ingrTotalText = document.getElementById('ingredients-total-no');
+    resetBtn.addEventListener('click', () => {
+        Object.keys(store?.ingredients).forEach((ingr) => store.ingredients[ingr] = 0);
+        for (let i = 0; i < ingrNoElems.length; i += 1) {
+            ingrNoElems.item(i).innerHTML = 0;
+        }
+        if (ingrTotalText) {
+            ingrTotalText.innerHTML = 0;
+        }
+        checkRecipes();
+    });
+}
+
 function toggleIngredientListener() {
     const toggle = document.getElementById('ingredients-toggle');
     toggle?.addEventListener('click', () => {
@@ -182,6 +198,7 @@ function typeListeners() {
 
 window.onload = () => {
     selectIngredientListeners();
+    resetIngredientsListener();
     toggleIngredientListener();
     typeListeners();
     checkRecipes();
