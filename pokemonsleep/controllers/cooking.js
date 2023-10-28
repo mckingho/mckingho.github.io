@@ -44,12 +44,29 @@ function recipeIngredientsHtml(recipe, lacking = {}) {
 function checkRecipes() {
     for (const [recipeKey, info] of Object.entries(recipes)) {
         const lacking = lacking_ingredients(info, store?.ingredients);
+        // Find if close to ready to cook a dish also
+        const closeReady = Object.values(lacking).every((ingrNum) => ingrNum <= 2);
 
+        const dishElem = document.getElementById('dish-' + recipeKey);
         const dishPowerElem = document.getElementById('dish-power-' + recipeKey);
         if (Object.keys(lacking).length > 0) {
-            dishPowerElem?.classList.remove('cls-ready-dish-power');
+            dishPowerElem?.classList.remove('cls-dish-power-ready');
+            dishElem?.classList.remove('cls-dish-recipe-ready');
+            if (closeReady) {
+                // close to ready to cook dish
+                dishPowerElem?.classList.add('cls-dish-power-ready-close');
+                dishElem?.classList.add('cls-dish-recipe-ready-close');
+            } else {
+                // ingredients are far from recipe
+                dishPowerElem?.classList.remove('cls-dish-power-ready-close');
+                dishElem?.classList.remove('cls-dish-recipe-ready-close');
+            }
         } else {
-            dishPowerElem?.classList.add('cls-ready-dish-power');
+            // ready to cook dish 
+            dishPowerElem?.classList.remove('cls-dish-power-ready-close');
+            dishElem?.classList.remove('cls-dish-recipe-ready-close');
+            dishPowerElem?.classList.add('cls-dish-power-ready');
+            dishElem?.classList.add('cls-dish-recipe-ready');
         }
         const html = recipeIngredientsHtml(info, lacking);
         const ingrElem = document.getElementById('ingr-' + recipeKey);
