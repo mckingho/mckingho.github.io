@@ -100,6 +100,7 @@ function selectIngredientListeners() {
                 store.ingredients[ingr] -= 1;
                 setIngrNumText(store.ingredients[ingr]);
                 setIngrTotalText();
+                updateIngredientsSummary();
                 checkRecipes();
             }
         });
@@ -110,6 +111,7 @@ function selectIngredientListeners() {
                 store.ingredients[ingr] -= 5;
                 setIngrNumText(store.ingredients[ingr]);
                 setIngrTotalText();
+                updateIngredientsSummary();
                 checkRecipes();
             }
         });
@@ -120,6 +122,7 @@ function selectIngredientListeners() {
                 store.ingredients[ingr] += 5;
                 setIngrNumText(store.ingredients[ingr]);
                 setIngrTotalText();
+                updateIngredientsSummary();
                 checkRecipes();
             }
         });
@@ -129,6 +132,7 @@ function selectIngredientListeners() {
                 store.ingredients[ingr] += 1;
                 setIngrNumText(store.ingredients[ingr]);
                 setIngrTotalText();
+                updateIngredientsSummary();
                 checkRecipes();
             }
         });
@@ -147,14 +151,27 @@ function resetIngredientsListener() {
         if (ingrTotalText) {
             ingrTotalText.innerHTML = 0;
         }
+        updateIngredientsSummary();
         checkRecipes();
     });
+}
+
+function updateIngredientsSummary() {
+    let summary = '';
+    Object.keys(store?.ingredients).forEach((ingr) => {
+        if (store.ingredients[ingr] > 0) {
+            summary += ingredient_icons[ingr] + ' ' + store.ingredients[ingr] + '&nbsp;';
+        }
+    });
+    const summaryElem = document.getElementById('ingredients-summary');
+    if (summaryElem) {
+        summaryElem.innerHTML = summary;
+    }
 }
 
 function toggleIngredientListener() {
     const toggle = document.getElementById('ingredients-toggle');
     toggle?.addEventListener('click', () => {
-        console.log('toggle');
         const ingrCtr = document.getElementById('ingredients-container');
         if (ingrCtr?.style.display !== 'none') {
             ingrCtr.style.display = 'none';
@@ -216,6 +233,7 @@ function typeListeners() {
 window.onload = () => {
     selectIngredientListeners();
     resetIngredientsListener();
+    updateIngredientsSummary();
     toggleIngredientListener();
     typeListeners();
     checkRecipes();
