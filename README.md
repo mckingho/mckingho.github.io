@@ -1,1 +1,2 @@
 - [Evolution Items in Pokémon Sleep](https://mckingho.github.io/pokemonsleep/evolutionitem)
+- [Cooking in Pokémon Sleep](https://mckingho.github.io/pokemonsleep/cooking)
