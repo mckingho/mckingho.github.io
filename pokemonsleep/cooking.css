@@ -65,6 +65,10 @@ body {
     margin-bottom: 16px;
 }
 
+#ingredients-summary:empty {
+    display: none;
+}
+
 #ingredients-total-no {
     color: #F4F4F4;
     background: #D2991D;
@@ -110,10 +114,12 @@ body {
     margin-bottom: 16px;
     position: relative;
     cursor: pointer;
+    display: flex;
+    flex-flow: column;
 }
 
 .cls-ingr-display {
-    height: 75%;
+    flex: 3;
 }
 
 .cls-select-ingr-box {
@@ -154,7 +160,7 @@ body {
 }
 
 .cls-ingr-name {
-    min-height: 25%;
+    flex: 1;
     text-align: center;
     color: #2A2A2A;
     border-width: 1px 0 0 0;
