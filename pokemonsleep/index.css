@@ -1,0 +1,22 @@
+#side-image {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+}
+
+.mon {
+    width: 120px;
+    height: 96px;
+    margin: auto;
+    display: inline-block;
+    -webkit-mask-image: url(./res/mon.svg);
+    mask-image: url(./res/mon.svg);
+    -webkit-mask-size: 100%;
+    mask-size: 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+
+.bg-blue {
+    background-color: #3088F0;
+}
