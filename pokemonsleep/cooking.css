@@ -328,3 +328,24 @@ body {
 #custom-footer {
     height: 4px;
 }
+
+#home-icon {
+    float: right;
+}
+
+.mon {
+    width: 30px;
+    height: 24px;
+    margin: auto;
+    display: inline-block;
+    -webkit-mask-image: url(./res/mon.svg);
+    mask-image: url(./res/mon.svg);
+    -webkit-mask-size: 100%;
+    mask-size: 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+
+.bg-blue {
+    background-color: #3088F0;
+}
