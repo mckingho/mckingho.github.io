@@ -20,6 +20,20 @@ body a {
     color: #D2991D;
 }
 
+body .header .header-icon {
+    margin-right: 8px;
+}
+
+body .header h1,
+.header .header-icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+body .header a {
+    text-decoration: none;
+}
+
 body .table-of-contents {
     background-color: #2A2A2A;
     border: 1px solid #2A2A2A;
