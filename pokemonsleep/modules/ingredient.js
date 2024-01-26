@@ -136,6 +136,23 @@ const recipes = {
             { soybeans: 12 },
         ],
     },
+    'curry-17': {
+        name: 'Limber Corn Stew',
+        ingredients: [
+            { potato: 8 },
+            { milk: 8 },
+            { corn: 14 },
+        ],
+    },
+    'curry-18': {
+        name: 'Inferno Corn Keema Curry',
+        ingredients: [
+            { herb: 27 },
+            { sausage: 24 },
+            { ginger: 12 },
+            { corn: 14 },
+        ],
+    },
     'salads-1': {
         name: 'Slowpoke Tail Pepper Salad',
         ingredients: [
@@ -257,6 +274,30 @@ const recipes = {
             { soybeans: 10 },
         ],
     },
+    'salads-17': {
+        name: 'Greengrass Salad',
+        ingredients: [
+            { potato: 9 },
+            { oil: 22 },
+            { tomato: 14 },
+            { corn: 17 },
+        ],
+    },
+    'salads-18': {
+        name: 'Calm Mind Fruit Salad',
+        ingredients: [
+            { apple: 21 },
+            { honey: 16 },
+            { corn: 12 },
+        ],
+    },
+    'salads-19': {
+        name: 'Fury Attack Corn Salad',
+        ingredients: [
+            { oil: 8 },
+            { corn: 9 },
+        ],
+    },
     'desserts-1': {
         name: 'Fluffy Sweet Potatoes',
         ingredients: [
@@ -374,6 +415,23 @@ const recipes = {
             { oil: 9 },
             { cacao: 7 },
             { soybeans: 6 },
+        ],
+    },
+    'desserts-17': {
+        name: 'Explosion Popcorn',
+        ingredients: [
+            { milk: 7 },
+            { oil: 14 },
+            { corn: 15 },
+        ],
+    },
+    'desserts-18': {
+        name: 'Teatime Corn Scones',
+        ingredients: [
+            { apple: 20 },
+            { ginger: 20 },
+            { milk: 9 },
+            { corn: 18 },
         ],
     },
 };
