@@ -234,6 +234,10 @@ body {
     background-image: url(./res/ingredients/soybeans.svg);
 }
 
+#ingr-img-corn {
+    background-image: url(./res/ingredients/corn.svg);
+}
+
 #dishes-title {
     color: #2A2A2A;
     font-size: 24px;

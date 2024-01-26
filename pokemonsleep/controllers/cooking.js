@@ -18,6 +18,7 @@ const store = {
         cacao: 0,
         tail: 0,
         soybeans: 0,
+        corn: 0,
     },
     selectedType: 'dish-type-curry', // element ID
 };
