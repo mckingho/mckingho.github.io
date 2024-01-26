@@ -12,6 +12,11 @@ table td {
 
 /* filters that turns black color to target color */
 /* credit: calculation at https://codepen.io/sosuke/pen/Pjoqqp */
+.filter-dawn-stone {
+    /* #25B6A0 */
+    filter: invert(58%) sepia(60%) saturate(517%) hue-rotate(121deg) brightness(92%) contrast(88%);
+}
+
 .filter-fire-stone {
     /* #EA7E02 */
     filter: invert(71%) sepia(55%) saturate(6146%) hue-rotate(5deg) brightness(95%) contrast(103%);
