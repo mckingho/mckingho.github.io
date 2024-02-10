@@ -434,6 +434,22 @@ const recipes = {
             { corn: 18 },
         ],
     },
+    'desserts-19': {
+        name: 'Petal Dance Chocolate Tart',
+        ingredients: [
+            { apple: 11 },
+            { cacao: 11 },
+        ],
+    },
+    'desserts-20': {
+        name: 'Flower Gift Macarons',
+        ingredients: [
+            { egg: 25 },
+            { milk: 10 },
+            { honey: 17 },
+            { cacao: 25 },
+        ],
+    },
 };
 
 export {
