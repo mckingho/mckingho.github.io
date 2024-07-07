@@ -244,6 +244,21 @@ body {
     margin-bottom: 16px;
 }
 
+#dishes-toolbar {
+    margin-bottom: 16px;
+}
+
+#dishes-ignore-count-toggle {
+    color: #9D7316;
+    font-size: 16px;
+    font-family: monospace;
+    cursor: pointer;
+}
+
+#dishes-ignore-count-toggle::after {
+    content: "Ignore Count"
+}
+
 #dish-types-container {
     display: flex;
     margin-bottom: 16px;

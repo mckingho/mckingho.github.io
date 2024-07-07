@@ -21,6 +21,7 @@ const store = {
         corn: 0,
     },
     selectedType: 'dish-type-curry', // element ID
+    dishesIgnoreCount: false,
 };
 
 function recipeIngredientsHtml(recipe, lacking = {}) {
@@ -44,7 +45,7 @@ function recipeIngredientsHtml(recipe, lacking = {}) {
 
 function checkRecipes() {
     for (const [recipeKey, info] of Object.entries(recipes)) {
-        const lacking = lacking_ingredients(info, store?.ingredients);
+        const lacking = lacking_ingredients(info, store?.ingredients, store?.dishesIgnoreCount);
         // Find if close to ready to cook a dish also
         const closeReady = Object.values(lacking).every((ingrNum) => ingrNum <= 2);
 
@@ -231,6 +232,21 @@ function typeListeners() {
     setTypeListener(dessertsBtn);
 }
 
+function toggleIgnoreCountListener() {
+    const toggle = document.getElementById('dishes-ignore-count-toggle');
+    toggle?.addEventListener('click', () => {
+        const disableText = '[ ]';
+        if (toggle.innerText === disableText) {
+            toggle.innerText = '[v]';
+            store.dishesIgnoreCount = true;
+        } else {
+            toggle.innerText = disableText;
+            store.dishesIgnoreCount = false;
+        }
+        checkRecipes();
+    });
+}
+
 window.onload = () => {
     selectIngredientListeners();
     resetIngredientsListener();
@@ -238,4 +254,5 @@ window.onload = () => {
     toggleIngredientListener();
     typeListeners();
     checkRecipes();
+    toggleIgnoreCountListener();
 };
