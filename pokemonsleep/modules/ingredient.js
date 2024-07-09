@@ -107,10 +107,10 @@ const recipes = {
     'curry-13': {
         name: 'Ninja Curry',
         ingredients: [
-            { leek: 9 },
+            { leek: 12 },
             { mushroom: 5 },
             { sausage: 9 },
-            { soybeans: 15 },
+            { soybeans: 24 },
         ],
     },
     'curry-14': {
@@ -188,8 +188,8 @@ const recipes = {
     'salads-5': {
         name: 'Water Veil Tofu Salad',
         ingredients: [
-            { tomato: 6 },
-            { soybeans: 10 },
+            { tomato: 9 },
+            { soybeans: 15 },
         ],
     },
     'salads-6': {
@@ -264,7 +264,7 @@ const recipes = {
             { leek: 15 },
             { mushroom: 12 },
             { ginger: 11 },
-            { soybeans: 15 },
+            { soybeans: 19 },
         ],
     },
     'salads-16': {
@@ -412,9 +412,9 @@ const recipes = {
     'desserts-16': {
         name: 'Huge Power Soy Donuts',
         ingredients: [
-            { oil: 9 },
+            { oil: 12 },
             { cacao: 7 },
-            { soybeans: 6 },
+            { soybeans: 16 },
         ],
     },
     'desserts-17': {
