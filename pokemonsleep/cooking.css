@@ -100,7 +100,11 @@ body {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    max-width: 720px;
+    margin-top: auto;
     margin-bottom: 16px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .cls-ingr {
