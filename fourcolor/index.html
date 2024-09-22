@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Four Color Theorem</title>
+    <link rel="stylesheet" href="../blog.css">
+    <meta name="description" content="Info page of Four Color Theorem Android application released in August 2020.">
+    <meta name="keywords" content="four color, puzzle">
+    <style>
+        #homepage {
+            height: 30vh;
+            border-radius: 16px;
+        }
+
+        .screenshot-list {
+            display: flex;
+            overflow: auto;
+            scroll-snap-type: x mandatory;
+            list-style: none;
+            scrollbar-color: #CCCCCC #353535;
+            scrollbar-width: thin;
+        }
+
+        .screenshot-listitem {
+            flex-shrink: 0;
+            scroll-snap-align: start;
+            margin-right: 12px;
+        }
+
+        .screenshot-img {
+            border-width: 0;
+            box-shadow: 0 1px 2px 0 rgba(204, 204, 204, .3), 0 1px 3px 1px rgba(204, 204, 204, .15);
+            border-radius: 8px;
+            height: 308px;
+            min-width: 92px;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="p-homepage">
+        <img id="homepage" src="res/Screenshot_playstore.png" alt="Four Color Theorem"></img>
+    </p>
+    <h2>Screenshots</h2>
+    <menu class="screenshot-list" role="list">
+        <li class="screenshot-listitem"><img class="screenshot-img" src="res/Screenshot_1.jpg" alt="screenshot"
+                load="lazy"></img></li>
+        <li class="screenshot-listitem"><img class="screenshot-img" src="res/Screenshot_2.jpg" alt="screenshot"
+                load="lazy"></img></li>
+        <li class="screenshot-listitem"><img class="screenshot-img" src="res/Screenshot_3.jpg" alt="screenshot"
+                load="lazy"></img></li>
+        <li class="screenshot-listitem"><img class="screenshot-img" src="res/Screenshot_4.jpg" alt="screenshot"
+                load="lazy"></img></li>
+        <li class="screenshot-listitem"><img class="screenshot-img" src="res/Screenshot_5.jpg" alt="screenshot"
+                load="lazy"></img></li>
+        <li class="screenshot-listitem"><img class="screenshot-img" src="res/Screenshot_6.jpg" alt="screenshot"
+                load="lazy"></img></li>
+        <li class="screenshot-listitem"><img class="screenshot-img" src="res/Screenshot_7.jpg" alt="screenshot"
+                load="lazy"></img></li>
+    </menu>
+    <p class="outro">
+        <span>
+            <a href="https://play.google.com/store/apps/details?id=com.mckingho.fourcolortheorem">[link]</a>
+        </span>
+    </p>
+</body>
