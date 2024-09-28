@@ -242,6 +242,10 @@ body {
     background-image: url(./res/ingredients/corn.svg);
 }
 
+#ingr-img-coffee {
+    background-image: url(./res/ingredients/coffee.svg);
+}
+
 #dishes-title {
     color: #2A2A2A;
     font-size: 24px;

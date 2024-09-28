@@ -19,6 +19,7 @@ const store = {
         tail: 0,
         soybeans: 0,
         corn: 0,
+        coffee: 0,
     },
     selectedType: 'dish-type-curry', // element ID
     dishesIgnoreCount: false,

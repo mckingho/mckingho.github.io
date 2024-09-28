@@ -15,6 +15,7 @@ const ingredient_icons = {
     tail: '⤴️',
     soybeans: '🫘',
     corn: '🌽',
+    coffee: '☕',
 };
 
 const recipes = {
