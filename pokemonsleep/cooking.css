@@ -99,7 +99,7 @@ body {
 #ingredients-container {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     max-width: 720px;
     margin-top: auto;
     margin-bottom: 16px;
