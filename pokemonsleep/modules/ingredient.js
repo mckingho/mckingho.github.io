@@ -154,6 +154,23 @@ const recipes = {
             { corn: 14 },
         ],
     },
+    'curry-19': {
+        name: 'Dizzy Punch Spicy Curry',
+        ingredients: [
+            { herb: 11 },
+            { honey: 11 },
+            { coffee: 11 },
+        ],
+    },
+    'curry-20': {
+        name: 'Hidden Power Perk-Up Stew',
+        ingredients: [
+            { mushroom: 23 },
+            { tomato: 25 },
+            { soybeans: 28 },
+            { coffee: 16 },
+        ],
+    },
     'salads-1': {
         name: 'Slowpoke Tail Pepper Salad',
         ingredients: [
@@ -297,6 +314,24 @@ const recipes = {
         ingredients: [
             { oil: 8 },
             { corn: 9 },
+        ],
+    },
+    'salads-20': {
+        name: 'Cross Chop Salad',
+        ingredients: [
+            { egg: 20 },
+            { sausage: 15 },
+            { tomato: 10 },
+            { corn: 11 },
+        ],
+    },
+    'salads-21': {
+        name: 'Defiant Coffee-Dressed Salad',
+        ingredients: [
+            { potato: 22 },
+            { sausage: 28 },
+            { oil: 22 },
+            { coffee: 28 },
         ],
     },
     'desserts-1': {
@@ -449,6 +484,23 @@ const recipes = {
             { milk: 10 },
             { honey: 17 },
             { cacao: 25 },
+        ],
+    },
+    'desserts-21': {
+        name: 'Early Bird Coffee Jelly',
+        ingredients: [
+            { milk: 14 },
+            { honey: 12 },
+            { coffee: 16 },
+        ],
+    },
+    'desserts-22': {
+        name: 'Zing Zap Spiced Cola',
+        ingredients: [
+            { leek: 20 },
+            { apple: 35 },
+            { ginger: 20 },
+            { coffee: 12 },
         ],
     },
 };
