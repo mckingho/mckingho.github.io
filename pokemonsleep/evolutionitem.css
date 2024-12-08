@@ -10,6 +10,15 @@ table td {
     background-size: cover;
 }
 
+.metal-coat {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    background: url(./res/metalcoat.svg) #c4d4e0;
+    background-size: cover;
+    border-radius: 12px;
+}
+
 .razor-claw {
     width: 32px;
     height: 32px;
