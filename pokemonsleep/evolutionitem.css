@@ -10,6 +10,15 @@ table td {
     background-size: cover;
 }
 
+.razor-claw {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    background: url(./res/razorclaw.svg) #97a09d;
+    background-size: cover;
+    border-radius: 12px;
+}
+
 /* filters that turns black color to target color */
 /* credit: calculation at https://codepen.io/sosuke/pen/Pjoqqp */
 .filter-dawn-stone {
