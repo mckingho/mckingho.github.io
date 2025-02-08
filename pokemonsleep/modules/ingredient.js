@@ -503,6 +503,23 @@ const recipes = {
             { coffee: 12 },
         ],
     },
+    'desserts-23': {
+        name: 'Mold Breaker Corn Tiramisu',
+        ingredients: [
+            { milk: 12 },
+            { corn: 14 },
+            { coffee: 14 },
+        ],
+    },
+    'desserts-24': {
+        name: 'Clodsire Eclair',
+        ingredients: [
+            { milk: 26 },
+            { honey: 22 },
+            { cacao: 30 },
+            { coffee: 24 },
+        ],
+    },
 };
 
 export {
