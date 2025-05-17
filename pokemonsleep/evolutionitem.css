@@ -24,9 +24,10 @@ table td {
     width: 32px;
     height: 32px;
     display: inline-block;
-    background: url(./res/metalcoat.svg) #c4d4e0;
+    background: url(./res/metalcoat.svg);
     background-size: cover;
-    border-radius: 12px;
+    /* #C4D4E0 */
+    filter: invert(86%) sepia(25%) saturate(137%) hue-rotate(163deg) brightness(96%) contrast(88%);
 }
 
 .razor-claw {
