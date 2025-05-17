@@ -40,6 +40,17 @@ table td {
     filter: invert(68%) sepia(16%) saturate(99%) hue-rotate(109deg) brightness(91%) contrast(86%);
 }
 
+.razor-fang {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    background: url(./res/razorfang.svg);
+    background-size: cover;
+    /* #D4D6CE */
+    filter: invert(97%) sepia(5%) saturate(244%) hue-rotate(33deg) brightness(89%) contrast(90%);
+}
+
+
 /* filters that turns black color to target color */
 /* credit: calculation at https://codepen.io/sosuke/pen/Pjoqqp */
 .filter-dawn-stone {
