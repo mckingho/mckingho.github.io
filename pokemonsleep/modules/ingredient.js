@@ -334,6 +334,24 @@ const recipes = {
             { coffee: 28 },
         ],
     },
+    'salads-22': {
+        name: 'Petal Blizzard Layered Salad',
+        ingredients: [
+            { egg: 25 },
+            { potato: 15 },
+            { sausage: 12 },
+            { oil: 17 },
+        ],
+    },
+    'salads-23': {
+        name: 'Apple Acid Yogurt-Dressed Salad',
+        ingredients: [
+            { egg: 35 },
+            { apple: 28 },
+            { milk: 18 },
+            { tomato: 23 },
+        ],
+    },
     'desserts-1': {
         name: 'Fluffy Sweet Potatoes',
         ingredients: [
