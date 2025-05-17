@@ -10,6 +10,14 @@ table td {
     background-size: cover;
 }
 
+.round-stone {
+    width: 48px;
+    height: 32px;
+    display: inline-block;
+    background: url(./res/ovalstone.svg);
+    background-size: cover;
+}
+
 .linking-cord {
     width: 34px;
     height: 32px;
