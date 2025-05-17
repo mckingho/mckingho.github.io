@@ -58,6 +58,11 @@ table td {
     filter: invert(58%) sepia(60%) saturate(517%) hue-rotate(121deg) brightness(92%) contrast(88%);
 }
 
+.filter-dusk-stone {
+    /* #7c5b92 */
+    filter: invert(41%) sepia(7%) saturate(2631%) hue-rotate(233deg) brightness(94%) contrast(89%);
+}
+
 .filter-fire-stone {
     /* #EA7E02 */
     filter: invert(71%) sepia(55%) saturate(6146%) hue-rotate(5deg) brightness(95%) contrast(103%);
