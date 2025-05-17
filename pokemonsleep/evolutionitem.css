@@ -33,9 +33,10 @@ table td {
     width: 32px;
     height: 32px;
     display: inline-block;
-    background: url(./res/razorclaw.svg) #97a09d;
+    background: url(./res/razorclaw.svg);
     background-size: cover;
-    border-radius: 12px;
+    /* #97A09D */
+    filter: invert(68%) sepia(16%) saturate(99%) hue-rotate(109deg) brightness(91%) contrast(86%);
 }
 
 /* filters that turns black color to target color */
