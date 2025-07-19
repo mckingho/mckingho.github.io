@@ -267,6 +267,46 @@ body {
     content: "Ignore Count"
 }
 
+/* Style for the sort dropdown */
+#dishes-sort-container {
+    float: right;
+    margin-left: 16px;
+    font-size: 16px;
+    font-family: monospace;
+    color: #9D7316;
+    background: none;
+    border: none;
+    vertical-align: middle;
+}
+
+#dishes-sort-container label {
+    color: #9D7316;
+    font-size: 16px;
+    font-family: monospace;
+    vertical-align: middle;
+    background: none;
+    border: none;
+    font-weight: normal;
+    margin-right: -4px;
+}
+
+#dishes-sort-select {
+    color: #9D7316;
+    font-size: 16px;
+    font-family: monospace;
+    border: none;
+    cursor: pointer;
+    vertical-align: middle;
+    box-shadow: 0 2px #A3A3A3;
+    background: none;
+}
+
+
+#dishes-sort-select option {
+    font-family: monospace;
+    background: #BABABA;
+}
+
 #dish-types-container {
     display: flex;
     margin-bottom: 16px;
