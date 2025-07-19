@@ -1,3 +1,4 @@
+// Sort function to sort dishes by strength
 function sortDishesInContainer(containerId) {
     const container = document.getElementById(containerId);
     if (!container) return;
@@ -16,11 +17,6 @@ function sortDishesInContainer(containerId) {
     dishes.forEach(dish => container.appendChild(dish));
 }
 
-// Example usage:
-sortDishesInContainer('dish-curry-container');
-sortDishesInContainer('dish-salads-container');
-sortDishesInContainer('dish-desserts-container');
-
 function sortDishesByIdNumber(containerId) {
     const container = document.getElementById(containerId);
     if (!container) return;
@@ -37,7 +33,19 @@ function sortDishesByIdNumber(containerId) {
     dishes.forEach(dish => container.appendChild(dish));
 }
 
-// Example usage:
-sortDishesByIdNumber('dish-curry-container');
-sortDishesByIdNumber('dish-salads-container');
-sortDishesByIdNumber('dish-desserts-container');
+document.addEventListener('DOMContentLoaded', function () {
+    const sortSelect = document.getElementById('dishes-sort-select');
+    if (!sortSelect) return;
+
+    sortSelect.addEventListener('change', function () {
+        if (sortSelect.value === 'default') {
+            sortDishesByIdNumber('dish-curry-container');
+            sortDishesByIdNumber('dish-salads-container');
+            sortDishesByIdNumber('dish-desserts-container');
+        } else if (sortSelect.value === 'strength') {
+            sortDishesInContainer('dish-curry-container');
+            sortDishesInContainer('dish-salads-container');
+            sortDishesInContainer('dish-desserts-container');
+        }
+    });
+});
