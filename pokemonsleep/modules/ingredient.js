@@ -171,6 +171,15 @@ const recipes = {
             { coffee: 16 },
         ],
     },
+    'curry-21': {
+        name: 'Cut Sukiyaki Curry',
+        ingredients: [
+            { leek: 27 },
+            { egg: 22 },
+            { sausage: 26 },
+            { honey: 26 },
+        ],
+    },
     'salads-1': {
         name: 'Slowpoke Tail Pepper Salad',
         ingredients: [
