@@ -20,3 +20,24 @@ function sortDishesInContainer(containerId) {
 sortDishesInContainer('dish-curry-container');
 sortDishesInContainer('dish-salads-container');
 sortDishesInContainer('dish-desserts-container');
+
+function sortDishesByIdNumber(containerId) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+
+    const dishes = Array.from(container.getElementsByClassName('cls-dish-recipe'));
+
+    dishes.sort((a, b) => {
+        // Extract number from id (e.g., dish-salads-21 -> 21)
+        const numA = parseInt(a.id.match(/\d+$/)?.[0] || '0', 10);
+        const numB = parseInt(b.id.match(/\d+$/)?.[0] || '0', 10);
+        return numA - numB; // Ascending
+    });
+
+    dishes.forEach(dish => container.appendChild(dish));
+}
+
+// Example usage:
+sortDishesByIdNumber('dish-curry-container');
+sortDishesByIdNumber('dish-salads-container');
+sortDishesByIdNumber('dish-desserts-container');
