@@ -246,6 +246,10 @@ body {
     background-image: url(./res/ingredients/coffee.svg);
 }
 
+#ingr-img-pumpkin {
+    background-image: url(./res/ingredients/pumpkin.svg);
+}
+
 #dishes-title {
     color: #2A2A2A;
     font-size: 24px;

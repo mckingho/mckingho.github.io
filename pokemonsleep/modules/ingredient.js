@@ -16,6 +16,7 @@ const ingredient_icons = {
     soybeans: '🫘',
     corn: '🌽',
     coffee: '☕',
+    pumpkin: '🎃',
 };
 
 const recipes = {
@@ -178,6 +179,15 @@ const recipes = {
             { egg: 22 },
             { sausage: 26 },
             { honey: 26 },
+        ],
+    },
+    'curry-22': {
+        name: 'Role Play Pumpkaboo Stew',
+        ingredients: [
+            { mushroom: 25 },
+            { potato: 18 },
+            { sausage: 16 },
+            { pumpkin: 10 },
         ],
     },
     'salads-1': {
@@ -545,6 +555,15 @@ const recipes = {
             { honey: 22 },
             { cacao: 30 },
             { coffee: 24 },
+        ],
+    },
+    'desserts-25': {
+        name: 'Scary Face Pancakes',
+        ingredients: [
+            { egg: 24 },
+            { honey: 32 },
+            { tomato: 29 },
+            { pumpkin: 18 },
         ],
     },
 };
