@@ -17,6 +17,7 @@ const ingredient_icons = {
     corn: '🌽',
     coffee: '☕',
     pumpkin: '🎃',
+    avocado: '🥑',
 };
 
 const recipes = {

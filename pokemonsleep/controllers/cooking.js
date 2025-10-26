@@ -21,6 +21,7 @@ const store = {
         corn: 0,
         coffee: 0,
         pumpkin: 0,
+        avocado: 0,
     },
     selectedType: 'dish-type-curry', // element ID
     dishesIgnoreCount: false,
