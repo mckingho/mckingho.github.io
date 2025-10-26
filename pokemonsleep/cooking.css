@@ -261,6 +261,9 @@ body {
 }
 
 #dishes-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 16px;
 }
 
@@ -277,14 +280,11 @@ body {
 
 /* Style for the sort dropdown */
 #dishes-sort-container {
-    float: right;
-    margin-left: 16px;
     font-size: 16px;
     font-family: monospace;
     color: #9D7316;
     background: none;
     border: none;
-    vertical-align: middle;
 }
 
 #dishes-sort-container label {
