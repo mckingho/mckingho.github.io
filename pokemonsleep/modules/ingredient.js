@@ -191,6 +191,15 @@ const recipes = {
             { pumpkin: 10 },
         ],
     },
+    'curry-23': {
+        name: 'Overgrow Avocado Gratin',
+        ingredients: [
+            { potato: 20 },
+            { milk: 41 },
+            { oil: 32 },
+            { avocado: 22 },
+        ],
+    },
     'salads-1': {
         name: 'Slowpoke Tail Pepper Salad',
         ingredients: [
@@ -370,6 +379,23 @@ const recipes = {
             { apple: 28 },
             { milk: 18 },
             { tomato: 23 },
+        ],
+    },
+    'salads-24': {
+        name: 'Luscious Avocado Salad',
+        ingredients: [
+            { oil: 10 },
+            { soybeans: 18 },
+            { avocado: 14 },
+        ],
+    },
+    'salads-25': {
+        name: 'Bulldoze Guacamole and Chips',
+        ingredients: [
+            { herb: 30 },
+            { soybeans: 22 },
+            { corn: 25 },
+            { avocado: 28 },
         ],
     },
     'desserts-1': {
@@ -565,6 +591,14 @@ const recipes = {
             { honey: 32 },
             { tomato: 29 },
             { pumpkin: 18 },
+        ],
+    },
+    'desserts-26': {
+        name: 'Leaf Tornado Smoothie',
+        ingredients: [
+            { milk: 14 },
+            { tomato: 16 },
+            { avocado: 18 },
         ],
     },
 };
