@@ -601,6 +601,15 @@ const recipes = {
             { avocado: 18 },
         ],
     },
+    'desserts-27': {
+        name: 'Honey Gather Chocolate Waffles',
+        ingredients: [
+            { honey: 38 },
+            { corn: 28 },
+            { oil: 28 },
+            { cacao: 21 },
+        ],
+    },
 };
 
 export {
