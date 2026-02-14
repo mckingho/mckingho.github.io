@@ -266,7 +266,6 @@ const recipes = {
             { milk: 12 },
             { oil: 5 },
             { tomato: 6 },
-
         ],
     },
     'salads-10': {
@@ -529,8 +528,8 @@ const recipes = {
         name: 'Teatime Corn Scones',
         ingredients: [
             { apple: 20 },
-            { ginger: 20 },
             { milk: 9 },
+            { ginger: 20 },
             { corn: 18 },
         ],
     },
@@ -605,9 +604,9 @@ const recipes = {
         name: 'Honey Gather Chocolate Waffles',
         ingredients: [
             { honey: 38 },
-            { corn: 28 },
             { oil: 28 },
             { cacao: 21 },
+            { corn: 28 },
         ],
     },
 };
