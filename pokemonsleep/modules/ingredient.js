@@ -397,6 +397,15 @@ const recipes = {
             { avocado: 28 },
         ],
     },
+    'salads-26': {
+        name: 'Scald Chunky Salad',
+        ingredients: [
+            { potato: 30 },
+            { mushroom: 27 },
+            { corn: 18 },
+            { pumpkin: 20 },
+        ],
+    },
     'desserts-1': {
         name: 'Fluffy Sweet Potatoes',
         ingredients: [
