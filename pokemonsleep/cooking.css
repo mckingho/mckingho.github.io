@@ -355,15 +355,44 @@ body {
     margin-bottom: 8px;
     min-height: 60px;
     box-shadow: 0 2px #A3A3A3;
-    background: linear-gradient(90deg, #898989 46px, rgba(0, 0, 0, 0) 46px);
+    position: relative;
+    background-color: #E2E2E2;
+    overflow: hidden;
 }
 
-.cls-dish-recipe-ready {
-    background: linear-gradient(90deg, #D2991D 46px, rgba(0, 0, 0, 0) 46px);
+.cls-dish-emoji-slot {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #CCCCCC;
+    background-image: conic-gradient(#D2991D var(--ready-kinds-percent, 0%), #CCCCCC 0);
+    border-radius: 8px 0 0 8px;
 }
 
-.cls-dish-recipe-ready-close {
-    background: linear-gradient(90deg, #AE9154 46px, rgba(0, 0, 0, 0) 46px);
+.cls-dish-emoji {
+    position: relative;
+    z-index: 1;
+    font-size: 24px;
+    line-height: 1;
+}
+
+.cls-dish-emoji::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    width: 18px;
+    height: 6px;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.32);
+    filter: blur(1px);
+    z-index: -1;
 }
 
 .cls-dish-power {

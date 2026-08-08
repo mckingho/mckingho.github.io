@@ -1,5 +1,6 @@
 import { ingredient_icons, recipes } from '../modules/ingredient.js'
 import { lacking_ingredients } from '../modules/cooking.js'
+import { dishEmoji } from '../modules/dishIcon.js'
 
 const store = {
     ingredients: {
@@ -52,6 +53,54 @@ function totalIngredientCount(recipe) {
     }, 0);
 }
 
+function totalIngredientKinds(recipe) {
+    return (recipe?.ingredients || []).reduce((total, ingredientCount) => {
+        return total + Object.keys(ingredientCount).length;
+    }, 0);
+}
+
+function renderDishEmojiSlots() {
+    for (const [recipeKey, info] of Object.entries(recipes)) {
+        const dishElem = document.getElementById('dish-' + recipeKey);
+        if (!dishElem) {
+            continue;
+        }
+
+        let emojiSlotElem = document.getElementById('dish-emoji-slot-' + recipeKey);
+        let emojiElem = document.getElementById('dish-emoji-' + recipeKey);
+
+        if (!emojiSlotElem) {
+            emojiSlotElem = document.createElement('div');
+            emojiSlotElem.id = 'dish-emoji-slot-' + recipeKey;
+            emojiSlotElem.className = 'cls-dish-emoji-slot';
+
+            emojiElem = document.createElement('div');
+            emojiElem.id = 'dish-emoji-' + recipeKey;
+            emojiElem.className = 'cls-dish-emoji';
+
+            emojiSlotElem.append(emojiElem);
+            dishElem.insertAdjacentElement('afterbegin', emojiSlotElem);
+        }
+
+        if (emojiElem) {
+            emojiElem.textContent = dishEmoji(info);
+        }
+    }
+}
+
+function updateDishEmojiProgress(recipeKey, recipe, lacking) {
+    const emojiSlotElem = document.getElementById('dish-emoji-slot-' + recipeKey);
+    if (!emojiSlotElem) {
+        return;
+    }
+
+    const totalKinds = totalIngredientKinds(recipe);
+    const readyKinds = Math.max(0, totalKinds - Object.keys(lacking).length);
+    const readyKindsPercent = totalKinds === 0 ? 0 : (readyKinds / totalKinds) * 100;
+
+    emojiSlotElem.style.setProperty('--ready-kinds-percent', `${readyKindsPercent}%`);
+}
+
 function renderDishTotalIngredientCounts() {
     const sortSelect = document.getElementById('dishes-sort-select');
     const showTotalIngredients = sortSelect?.value === 'total-ingredients';
@@ -86,33 +135,30 @@ function checkRecipes() {
         // Find if close to ready to cook a dish also
         const closeReady = Object.values(lacking).every((ingrNum) => ingrNum <= 2);
 
-        const dishElem = document.getElementById('dish-' + recipeKey);
         const dishPowerElem = document.getElementById('dish-power-' + recipeKey);
         const totalIngredientsElem = document.getElementById('dish-total-ingredients-' + recipeKey);
         if (Object.keys(lacking).length > 0) {
             dishPowerElem?.classList.remove('cls-dish-power-ready');
             totalIngredientsElem?.classList.remove('cls-dish-power-ready');
-            dishElem?.classList.remove('cls-dish-recipe-ready');
             if (closeReady) {
                 // close to ready to cook dish
                 dishPowerElem?.classList.add('cls-dish-power-ready-close');
                 totalIngredientsElem?.classList.add('cls-dish-power-ready-close');
-                dishElem?.classList.add('cls-dish-recipe-ready-close');
             } else {
                 // ingredients are far from recipe
                 dishPowerElem?.classList.remove('cls-dish-power-ready-close');
                 totalIngredientsElem?.classList.remove('cls-dish-power-ready-close');
-                dishElem?.classList.remove('cls-dish-recipe-ready-close');
             }
         } else {
             // ready to cook dish 
             dishPowerElem?.classList.remove('cls-dish-power-ready-close');
             totalIngredientsElem?.classList.remove('cls-dish-power-ready-close');
-            dishElem?.classList.remove('cls-dish-recipe-ready-close');
             dishPowerElem?.classList.add('cls-dish-power-ready');
             totalIngredientsElem?.classList.add('cls-dish-power-ready');
-            dishElem?.classList.add('cls-dish-recipe-ready');
         }
+
+        updateDishEmojiProgress(recipeKey, info, lacking);
+
         const html = recipeIngredientsHtml(info, lacking);
         const ingrElem = document.getElementById('ingr-' + recipeKey);
         if (ingrElem) {
@@ -291,6 +337,7 @@ function toggleIgnoreCountListener() {
 }
 
 window.onload = () => {
+    renderDishEmojiSlots();
     renderDishTotalIngredientCounts();
     selectIngredientListeners();
     resetIngredientsListener();
