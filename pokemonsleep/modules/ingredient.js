@@ -200,6 +200,24 @@ const recipes = {
             { avocado: 22 },
         ],
     },
+    'curry-24': {
+        name: 'Greengrass Curry Bun',
+        ingredients: [
+            { herb: 20 },
+            { oil: 15 },
+            { ginger: 20 },
+            { soybeans: 8 },
+        ],
+    },
+    'curry-25': {
+        name: 'Bounce Curry Udon',
+        ingredients: [
+            { mushroom: 31 },
+            { herb: 22 },
+            { sausage: 20 },
+            { ginger: 39 },
+        ],
+    },
     'salads-1': {
         name: 'Slowpoke Tail Pepper Salad',
         ingredients: [
