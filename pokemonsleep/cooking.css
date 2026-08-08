@@ -55,7 +55,7 @@ body {
     color: #2A2A2A;
     position: sticky;
     top: 4px;
-    z-index: 1;
+    z-index: 20;
     background-color: #CCCCCC;
     border-radius: 8px;
     border-width: 1px;
@@ -67,6 +67,11 @@ body {
 
 #ingredients-summary:empty {
     display: none;
+}
+
+#dishes-container {
+    position: relative;
+    z-index: 0;
 }
 
 #ingredients-total-no {
