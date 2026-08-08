@@ -17,6 +17,21 @@ function sortDishesInContainer(containerId) {
     dishes.forEach(dish => container.appendChild(dish));
 }
 
+function sortDishesByTotalIngredients(containerId) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+
+    const dishes = Array.from(container.getElementsByClassName('cls-dish-recipe'));
+
+    dishes.sort((a, b) => {
+        const totalIngredientsA = Number(a.dataset.totalIngredients || '0');
+        const totalIngredientsB = Number(b.dataset.totalIngredients || '0');
+        return totalIngredientsB - totalIngredientsA;
+    });
+
+    dishes.forEach(dish => container.appendChild(dish));
+}
+
 function sortDishesByIdNumber(containerId) {
     const container = document.getElementById(containerId);
     if (!container) return;
@@ -33,19 +48,49 @@ function sortDishesByIdNumber(containerId) {
     dishes.forEach(dish => container.appendChild(dish));
 }
 
+function toggleDishMetricDisplay(showTotalIngredients) {
+    const dishPowerElems = document.getElementsByClassName('cls-dish-power');
+    const totalIngredientsElems = document.getElementsByClassName('cls-dish-total-ingredients');
+
+    for (const elem of dishPowerElems) {
+        elem.classList.toggle('cls-dish-metric-hidden', showTotalIngredients);
+    }
+
+    for (const elem of totalIngredientsElems) {
+        elem.classList.toggle('cls-dish-metric-hidden', !showTotalIngredients);
+    }
+}
+
+function applyDishSort(sortOrder) {
+    const containerIds = [
+        'dish-curry-container',
+        'dish-salads-container',
+        'dish-desserts-container',
+    ];
+
+    if (sortOrder === 'strength') {
+        containerIds.forEach(sortDishesInContainer);
+        toggleDishMetricDisplay(false);
+        return;
+    }
+
+    if (sortOrder === 'total-ingredients') {
+        containerIds.forEach(sortDishesByTotalIngredients);
+        toggleDishMetricDisplay(true);
+        return;
+    }
+
+    containerIds.forEach(sortDishesByIdNumber);
+    toggleDishMetricDisplay(false);
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     const sortSelect = document.getElementById('dishes-sort-select');
     if (!sortSelect) return;
 
     sortSelect.addEventListener('change', function () {
-        if (sortSelect.value === 'default') {
-            sortDishesByIdNumber('dish-curry-container');
-            sortDishesByIdNumber('dish-salads-container');
-            sortDishesByIdNumber('dish-desserts-container');
-        } else if (sortSelect.value === 'strength') {
-            sortDishesInContainer('dish-curry-container');
-            sortDishesInContainer('dish-salads-container');
-            sortDishesInContainer('dish-desserts-container');
-        }
+        applyDishSort(sortSelect.value);
     });
+
+    applyDishSort(sortSelect.value);
 });

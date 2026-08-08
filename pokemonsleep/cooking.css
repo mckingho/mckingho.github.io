@@ -374,6 +374,18 @@ body {
     border-radius: 0 8px 0 8px;
 }
 
+.cls-dish-total-ingredients {
+    color: #F4F4F4;
+    float: right;
+    background-color: #898989;
+    padding: 1px 8px 1px 8px;
+    border-radius: 0 8px 0 8px;
+}
+
+.cls-dish-metric-hidden {
+    display: none;
+}
+
 .cls-dish-name {
     color: #2A2A2A;
     padding-top: 8px;

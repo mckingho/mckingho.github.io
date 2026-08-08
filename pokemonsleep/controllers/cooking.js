@@ -46,6 +46,40 @@ function recipeIngredientsHtml(recipe, lacking = {}) {
     return html;
 }
 
+function totalIngredientCount(recipe) {
+    return (recipe?.ingredients || []).reduce((total, ingredientCount) => {
+        return total + Object.values(ingredientCount).reduce((sum, count) => sum + count, 0);
+    }, 0);
+}
+
+function renderDishTotalIngredientCounts() {
+    const sortSelect = document.getElementById('dishes-sort-select');
+    const showTotalIngredients = sortSelect?.value === 'total-ingredients';
+
+    for (const [recipeKey, info] of Object.entries(recipes)) {
+        const dishElem = document.getElementById('dish-' + recipeKey);
+        const dishPowerElem = document.getElementById('dish-power-' + recipeKey);
+        if (!dishElem || !dishPowerElem) {
+            continue;
+        }
+
+        const totalIngredients = totalIngredientCount(info);
+        dishElem.dataset.totalIngredients = String(totalIngredients);
+
+        let totalIngredientsElem = document.getElementById('dish-total-ingredients-' + recipeKey);
+        if (!totalIngredientsElem) {
+            totalIngredientsElem = document.createElement('span');
+            totalIngredientsElem.id = 'dish-total-ingredients-' + recipeKey;
+            totalIngredientsElem.className = showTotalIngredients
+                ? 'cls-dish-total-ingredients'
+                : 'cls-dish-total-ingredients cls-dish-metric-hidden';
+            dishPowerElem.insertAdjacentElement('afterend', totalIngredientsElem);
+        }
+
+        totalIngredientsElem.textContent = String(totalIngredients);
+    }
+}
+
 function checkRecipes() {
     for (const [recipeKey, info] of Object.entries(recipes)) {
         const lacking = lacking_ingredients(info, store?.ingredients, store?.dishesIgnoreCount);
@@ -251,6 +285,7 @@ function toggleIgnoreCountListener() {
 }
 
 window.onload = () => {
+    renderDishTotalIngredientCounts();
     selectIngredientListeners();
     resetIngredientsListener();
     updateIngredientsSummary();
